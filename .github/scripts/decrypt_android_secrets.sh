@@ -6,16 +6,17 @@ gpg --quiet --batch --yes --decrypt --passphrase="kumzq27kR3tdymDQ3JbjlSngLaI7oR
 --output android/android_keys.zip android/android_keys.zip.gpg && cd android && jar xvf android_keys.zip && cd -
 echo $PWD
 
-echo "********1"
+
 ls -d $PWD/android/*
 mv ./android/release-keystore.jks ./android/app
 echo ./
-echo "********2"
-search_dir=./android/
+echo "********1"
+search_dir=./android//keys
 for entry in "$search_dir"/*
 do
   echo "$entry"
 done
+echo "********2"
 FILE=./android/release-keystore.jks
 if test -f "$FILE"; then
     echo "$FILE exists."
