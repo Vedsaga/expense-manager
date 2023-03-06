@@ -17,7 +17,7 @@ do
   echo "$entry"
 done
 echo "********2"
-FILE=./android//keysrelease-keystore.jks
+FILE=./android//keys/release-keystore.jks
 if test -f "$FILE"; then
     echo "$FILE exists."
 fi
