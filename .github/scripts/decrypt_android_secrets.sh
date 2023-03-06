@@ -18,3 +18,8 @@ if [ -f android/release-keystore.jks ] && [ -f android/key.properties ]; then
 else
   echo "Failed to copy files."
 fi
+
+FILE=./android/release-keystore.jks
+if test -f "$FILE"; then
+    echo "$FILE exists."
+fi
