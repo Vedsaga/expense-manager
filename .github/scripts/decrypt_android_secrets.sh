@@ -11,7 +11,12 @@ ls -d $PWD/android/*
 mv ./android/release-keystore.jks ./android/app
 echo ./
 echo "********2"
-FILE=./android/app/release-keystore.jks
+search_dir=./android/
+for entry in "$search_dir"/*
+do
+  echo "$entry"
+done
+FILE=./android/release-keystore.jks
 if test -f "$FILE"; then
     echo "$FILE exists."
 fi
